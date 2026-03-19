@@ -1,5 +1,5 @@
 import pygame
-from constants import SCREEN_HEIGHT, SCREEN_WIDTH, PLAYER_RADIUS, LINE_WIDTH
+from constants import *
 from logger import log_state
 from player import *
 
@@ -25,11 +25,12 @@ def main():
                 return
         
         screen.fill("black")
+        player_one.update(dt)
         player_one.draw(screen)
         pygame.display.flip()
         log_state()
-        fps_clock.tick(60)
-        dt = fps_clock.tick()/1000
+        
+        dt = fps_clock.tick(60)/1000
 
         
         #print(dt)
