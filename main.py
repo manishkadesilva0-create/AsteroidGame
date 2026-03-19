@@ -19,6 +19,7 @@ def main():
         
         screen.fill("black")
         pygame.display.flip()
+        log_state()
 
 
 if __name__ == "__main__":
