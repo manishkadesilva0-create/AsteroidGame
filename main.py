@@ -9,6 +9,8 @@ def main():
 
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    fps_clock = pygame.time.Clock()
+    dt = 0
 
     game_state = 1
 
@@ -20,6 +22,9 @@ def main():
         screen.fill("black")
         pygame.display.flip()
         log_state()
+        fps_clock.tick(60)
+        dt = fps_clock.tick()/1000
+        #print(dt)
 
 
 if __name__ == "__main__":
