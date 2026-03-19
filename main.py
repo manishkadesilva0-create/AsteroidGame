@@ -53,7 +53,7 @@ def main():
             for bullet in shots:
                 if astro.collides_with(bullet):
                     log_event("asteroid_shot")
-                    astro.kill()
+                    astro.split()
                     bullet.kill()
 
         for sprite in drawable:
